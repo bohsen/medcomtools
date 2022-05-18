@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:medcomtools.helloWorld"
+        "onCommand:medcomtools.maskIdentifiers"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "medcomtools.helloWorld",
-				"title": "Hello World"
+				"command": "medcomtools.maskIdentifiers",
+				"title": "MedCom Tools: Mask identifiers"
 			}
 		]
 	},
