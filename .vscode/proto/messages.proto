@@ -1,0 +1,84 @@
+message Emessage {
+  Envelope envelope = 1;
+  XrayRequest xrayRequest = 2;
+  LocalElements localElements = 3;
+}
+
+message Envelope {
+  AcknowledgementCode acknowledgementCode = 1;
+  string identifier = 2;
+  Sent sent = 3;
+}
+
+message XrayRequest {
+  Letter letter = 1;
+  Sender sender = 2;
+  Receiver receiver = 3;
+  Patient patient = 4;
+  AdditionalInformation additionalInformation = 5;
+  Referral referral = 6;
+  RelevantClinicalInformation relevantClinicalInformation = 7;
+  HospitalVisitation hospitalVisitation = 8;
+}
+
+message Letter {
+  string identifier = 1;
+  VersionCode versionCode = 2;
+  StatisticalCode statisticalCode = 3;
+  Authorisation authorisation = 4;
+  TypeCode typecode = 5;
+  string statusCode = 6;
+}
+
+message Sender {
+  string EANIdentifier = 1;
+  string identifier = 2;
+  string identifierCode = 3;
+  string organisationName = 4;
+  string departmentName = 5;
+  Referrer referrer = 6;
+}
+
+message Referrer {
+  string personName = 1;
+}
+
+message Receiver {
+  string EANIdentifier = 1;
+  string identifier = 2;
+  string identifierCode = 3;
+}
+
+message Patient {
+  string civilRegistrationNumber = 1;
+  string personSurnameName = 2;
+  string personGivenName = 3;
+  string streetName = 4;
+  string districtName = 5;
+  int32 postCodeIdentifier = 6;
+}
+
+message AdditionalInformation {
+  
+}
+
+message Referral {
+
+}
+
+message RelevantClinicalInformation {
+
+}
+
+message HospitalVisitation {
+
+}
+
+message LocalElements {
+  repeated Person people = 1;
+}
+
+message Sent {
+  Date date = 1;
+  TimeOfDay time = 2;
+}
